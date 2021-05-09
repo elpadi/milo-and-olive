@@ -8,20 +8,20 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <?php if(is_front_page()): ?>  
+    <?php if (is_front_page()) : ?>  
     <title><?php bloginfo("name"); ?></title>
      
     <?php else : ?>
-    <title><?php wp_title( "|", true, "right" ); ?> <?php bloginfo("name"); ?></title>
+    <title><?php wp_title("|", true, "right"); ?> <?php bloginfo("name"); ?></title>
     
     <?php endif; ?>
     
     <!-- favicon & links -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     
     <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/html5shiv.js" type="text/javascript"></script>
@@ -33,13 +33,13 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="wrapper">
+    <div id="wrapper">
 
-		<div id="header-holder">
-		
-			<div id="header" class="cf" role="banner">
+        <div id="header-holder">
+        
+            <div id="header" class="cf" role="banner">
             
-            	<div id="menu-btn" class="cf">
+                <div id="menu-btn" class="cf">
                     <div id="nav-icon">
                         <span></span>
                         <span></span>
@@ -48,14 +48,14 @@
                     </div>
                 </div> <!-- .menu-btn --> 
             
-            	<div id="logo">
-					 <a href="<?php echo esc_url( home_url( "/" ) ); ?>"></a>
-				</div>
+                <div id="logo">
+                     <a href="<?php echo esc_url(home_url("/")); ?>"></a>
+                </div>
             
-				<nav id="nav" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav>
+                <nav id="nav" role="navigation">
+                    <?php wp_nav_menu(array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' )); ?>
+                </nav>
 
-			</div><!-- #header -->
-		
-		</div><!-- #header-holder -->
+            </div><!-- #header -->
+        
+        </div><!-- #header-holder -->
