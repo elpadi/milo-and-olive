@@ -1,0 +1,23 @@
+///*----------------------------------*\
+//  #FUNCTIONS
+//\*----------------------------------*/
+
+// Change px to ems based on base font-size
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+html {
+  font-size: ($browser-context/16)+em;
+}
+
+
+
+
+
+// Change px to rems based on base font-size
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}

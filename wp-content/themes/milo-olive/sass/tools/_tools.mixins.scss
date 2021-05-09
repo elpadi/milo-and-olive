@@ -1,0 +1,65 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+// Global mixins available to the entire project. Define file-specific
+// mixins inside the file to which they relate.
+
+/*--------------------------------------------------------------
+# TYPOGRAPHY
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+# OTHERS
+--------------------------------------------------------------*/
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+
+@mixin wrap {
+  width: $width;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
+@mixin last-child {
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+@mixin first-child {
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+
+@mixin block {
+  display: block;
+  width: 100%;
+}
+
+
+@mixin center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@mixin list {
+  list-style: none;
+  margin-left: 0;
+}
