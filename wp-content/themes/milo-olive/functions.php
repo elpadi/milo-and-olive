@@ -1,16 +1,14 @@
 <?php
 
-/**
- * Hide ACF from menu
- */
-
-add_filter('acf/settings/show_admin', '__return_false');
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}
 
 function milo_olive_scripts()
 {
 
     // Theme style
-    wp_enqueue_style('main-css', get_stylesheet_uri(), '', '20200924.03');
+    wp_enqueue_style('main-css', get_stylesheet_uri(), '', '1.0.0');
 
     // Main js
     wp_enqueue_script('milo_olive', get_template_directory_uri() . '/assets/js/milo-olive.js', ['jquery'], '20190807', true);
